@@ -3,29 +3,54 @@ package uitests.usermgmt;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
 
 import common.driver.DriverInit;
+import pageobjects.usermgmt.HomePage;
 
 public class LoginTests {
 	
+	private WebDriver driver;
 	
-	
-	public static void main(String[] args) throws InterruptedException {
-		
+	@BeforeMethod
+	public void setup() throws InterruptedException
+	{
 		//DriverInit obj =new DriverInit("chrome");
-		WebDriver driver = DriverInit.lauchLocalDriver("chrome");
-		
+		driver = DriverInit.lauchLocalDriver("chrome");
+				
 		driver.get("https://parabank.parasoft.com/");
 		driver.manage().window().maximize();
 		Thread.sleep(5000);
-		
-		driver.findElement(By.name("username")).sendKeys("rjsapient");
-		driver.findElement(By.name("password")).sendKeys("parabank@2022");
-		driver.findElement(By.xpath("//input[@value='Log In']")).click();
-		Thread.sleep(5000);
-		driver.quit();
-		
 	}
+	
+	@Test
+	public void TestOne() throws InterruptedException{
+		
+		
+		
+		HomePage objHomePage = new HomePage(driver);
+		objHomePage.enterUserName("rjsapient");
+		objHomePage.enterPwd("parabank@2022");
+		objHomePage.clickLogin();
+		
+//		driver.findElement(By.name("username")).sendKeys("rjsapient");
+//		driver.findElement(By.name("password")).sendKeys("parabank@2022");
+//		driver.findElement(By.xpath("//input[@value='Log In']")).click();
+		Thread.sleep(5000);
+		}
+	
+	@AfterMethod
+	public void tearDOwn()
+	{
+		driver.quit();
+	}
+	
 	
 
 }
