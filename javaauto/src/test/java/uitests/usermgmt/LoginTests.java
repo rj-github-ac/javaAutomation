@@ -12,6 +12,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import common.driver.DriverInit;
+import constants.Credentials;
 import pageobjects.usermgmt.HomePage;
 
 public class LoginTests {
@@ -35,8 +36,8 @@ public class LoginTests {
 		
 		
 		HomePage objHomePage = new HomePage(driver);
-		objHomePage.enterUserName("rjsapient");
-		objHomePage.enterPwd("parabank@2022");
+		objHomePage.enterUserName(Credentials.USERNAME);
+		objHomePage.enterPwd(Credentials.PASSWORD);
 		objHomePage.clickLogin();
 		
 //		driver.findElement(By.name("username")).sendKeys("rjsapient");
