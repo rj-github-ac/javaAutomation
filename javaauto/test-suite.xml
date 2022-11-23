@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="mytestSuite">
+<test name= "myTests">
+<classes>
+<class name= "uitests.usermgmt.LoginTests">
+</class>
+</classes>
+</test>
+</suite>
