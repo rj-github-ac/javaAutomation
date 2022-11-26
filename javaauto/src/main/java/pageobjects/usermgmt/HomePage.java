@@ -3,6 +3,8 @@ package pageobjects.usermgmt;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import actions.elementactions.ElementActions;
+
 public class HomePage {
 	
 	private WebDriver driver = null;
@@ -20,19 +22,20 @@ public class HomePage {
 	
 	public void enterUserName(String uName)
 	{
-		driver.findElement(inpUName).sendKeys(uName);
+		ElementActions.enterText(driver.findElement(inpUName), uName);
+		//driver.findElement(inpUName).sendKeys(uName);
 		
 	}
 	
 	public void enterPwd(String pwd)
 	{
-		driver.findElement(inpPwd).sendKeys(pwd);
+		ElementActions.enterText(driver.findElement(inpPwd), pwd);
 		
 	}
 	
 	public void clickLogin()
 	{
-		driver.findElement(btnSbmt).click();
+		ElementActions.clickEle(driver.findElement(btnSbmt));
 		
 	}
 	
