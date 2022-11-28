@@ -12,11 +12,12 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+import base.tests.BaseUITest;
 import common.driver.DriverInit;
 import constants.Credentials;
 import pageobjects.usermgmt.HomePage;
 @Listeners(testng.MyListeners.class)
-public class LoginTests {
+public class LoginTests extends BaseUITest {
 	
 	private WebDriver driver;
 	
