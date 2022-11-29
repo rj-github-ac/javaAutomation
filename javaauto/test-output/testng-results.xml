@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-11-27T16:44:01 IST" name="mytestSuite" finished-at="2022-11-27T16:44:20 IST" duration-ms="18180">
+  <suite started-at="2022-11-29T21:44:04 IST" name="mytestSuite" finished-at="2022-11-29T21:44:24 IST" duration-ms="19293">
     <groups>
     </groups>
-    <test started-at="2022-11-27T16:44:01 IST" name="myTests" finished-at="2022-11-27T16:44:20 IST" duration-ms="18180">
+    <test started-at="2022-11-29T21:44:04 IST" name="myTests" finished-at="2022-11-29T21:44:24 IST" duration-ms="19293">
       <class name="uitests.usermgmt.LoginTests">
-        <test-method is-config="true" signature="setup()[pri:0, instance:uitests.usermgmt.LoginTests@3427b02d]" started-at="2022-11-27T16:44:02 IST" name="setup" finished-at="2022-11-27T16:44:13 IST" duration-ms="11751" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:uitests.usermgmt.LoginTests@3427b02d]" started-at="2022-11-29T21:44:04 IST" name="setup" finished-at="2022-11-29T21:44:16 IST" duration-ms="11563" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="TestOne()[pri:0, instance:uitests.usermgmt.LoginTests@3427b02d]" started-at="2022-11-27T16:44:13 IST" name="TestOne" finished-at="2022-11-27T16:44:19 IST" duration-ms="6148" status="PASS">
+        <test-method signature="TestOne()[pri:0, instance:uitests.usermgmt.LoginTests@3427b02d]" started-at="2022-11-29T21:44:16 IST" name="TestOne" finished-at="2022-11-29T21:44:23 IST" duration-ms="7437" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestOne -->
-        <test-method is-config="true" signature="tearDOwn()[pri:0, instance:uitests.usermgmt.LoginTests@3427b02d]" started-at="2022-11-27T16:44:19 IST" name="tearDOwn" finished-at="2022-11-27T16:44:20 IST" duration-ms="257" status="PASS">
+        <test-method is-config="true" signature="tearDOwn()[pri:0, instance:uitests.usermgmt.LoginTests@3427b02d]" started-at="2022-11-29T21:44:23 IST" name="tearDOwn" finished-at="2022-11-29T21:44:24 IST" duration-ms="265" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDOwn -->
