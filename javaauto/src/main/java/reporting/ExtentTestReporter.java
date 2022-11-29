@@ -13,7 +13,7 @@ public class ExtentTestReporter {
 	
 	}
 	
-	//One flow is TestNG event based flow
+	//One flow is TestNG event based flow with onTestStart() method
 	//Other flow is user based flow
 	//We need to add things , everything here, create and add Test etc.
 	
