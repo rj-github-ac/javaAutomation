@@ -8,6 +8,18 @@ import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
 public class BaseUITest {
 	
+	@BeforeSuite
+	public void setup()
+	{
+		
+	}
+	
+	@AfterSuite
+	public void tearDOwn()
+	{
+		
+	}
+	
 //	ExtentReports extent;
 //	
 //	@BeforeSuite
