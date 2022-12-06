@@ -9,8 +9,8 @@ public class HomePage {
 	
 	private WebDriver driver = null;
 	
-	By inpUName= By.name("username");
-	By inpPwd= By.name("password");
+	By inpUName= By.xpath("//input[@name='username']");
+	By inpPwd= By.xpath("//input[@name='password']");
 	By btnSbmt= By.xpath("//input[@value='Log In']");
 	
 	

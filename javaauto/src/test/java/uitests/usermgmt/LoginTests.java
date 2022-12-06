@@ -19,18 +19,18 @@ import pageobjects.usermgmt.HomePage;
 @Listeners(testng.MyListeners.class)
 public class LoginTests extends BaseUITest {
 	
-	private WebDriver driver;
+	private WebDriver driver = DriverInit.lauchLocalDriver("chrome");
 	
-	@BeforeMethod
-	public void setup() throws InterruptedException
-	{
-		//DriverInit obj =new DriverInit("chrome");
-		driver = DriverInit.lauchLocalDriver("chrome");
-				
-		driver.get("https://parabank.parasoft.com/");
-		driver.manage().window().maximize();
-		Thread.sleep(5000);
-	}
+//	@BeforeMethod
+//	public void setup() throws InterruptedException
+//	{
+//		//DriverInit obj =new DriverInit("chrome");
+//		driver = DriverInit.lauchLocalDriver("chrome");
+//				
+//		driver.get("https://parabank.parasoft.com/");
+//		driver.manage().window().maximize();
+//		Thread.sleep(5000);
+//	}
 	
 	@Test
 	public void TestOne() throws InterruptedException{
