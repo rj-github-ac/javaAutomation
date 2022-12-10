@@ -10,7 +10,7 @@ import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
 import common.driver.DriverInit;
 
-public class BaseUITest {
+public class BaseUITest extends BaseTest{
 	
 	private WebDriver driver;
 	

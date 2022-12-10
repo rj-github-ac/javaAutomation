@@ -1,18 +1,15 @@
 package base.tests;
 
 import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
-public class BaseAPITest {
+import common.driver.DriverInit;
+
+public class BaseAPITest extends BaseTest {
 	
-	@BeforeSuite
-	public void setup()
-	{
-		
-	}
-	
-	@AfterSuite
-	public void tearDOwn()
+	@BeforeMethod
+	public void setupTest() throws InterruptedException
 	{
 		
 	}

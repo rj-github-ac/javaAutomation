@@ -6,13 +6,12 @@ import org.testng.annotations.BeforeSuite;
 public class BaseTest {
 	
 	@BeforeSuite
-	public void setup()
-	{
+	public void setupReport()	{
 		
 	}
 	
 	@AfterSuite
-	public void tearDOwn()
+	public void flushReport()
 	{
 		
 	}
