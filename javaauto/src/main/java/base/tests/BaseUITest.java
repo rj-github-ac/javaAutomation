@@ -14,11 +14,7 @@ public class BaseUITest extends BaseTest{
 	
 	private WebDriver driver;
 	
-	@BeforeSuite
-	public void setupReport()
-	{
-		
-	}
+	
 	
 	@BeforeMethod
 	public void setupTest() throws InterruptedException
@@ -31,11 +27,7 @@ public class BaseUITest extends BaseTest{
 		Thread.sleep(5000);
 	}
 	
-	@AfterSuite
-	public void flushReport()
-	{
-		
-	}
+	
 	
 //	ExtentReports extent;
 //	

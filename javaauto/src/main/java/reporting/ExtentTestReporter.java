@@ -5,11 +5,14 @@ import com.aventstack.extentreports.ExtentTest;
 
 public class ExtentTestReporter {
 	
-	public void xyz() {
+	public static ExtentTest getExtentTest() {
 		
 	
 		ExtentReports extent =ExtentReporter.getInstance();
 		ExtentTest extTest = extent.createTest("Test-Name");
+		
+		
+		return extTest;
 	
 	}
 	

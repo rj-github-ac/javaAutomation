@@ -1,5 +1,8 @@
 package testng;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.testng.ISuite;
 import org.testng.ISuiteListener;
 import org.testng.ITestContext;
@@ -15,8 +18,13 @@ import reporting.ExtentReporter;
 
 public class MyListeners implements ITestListener, ISuiteListener {
 	ExtentReports extent =null;
+	ExtentTest extTest = null;
+	static Map<Integer, ExtentTest> extentTestMap = new HashMap<Integer, ExtentTest>();
 	
 	
+	public static synchronized ExtentTest getTest() {
+		return (ExtentTest) extentTestMap.get((int)(long) (Thread.currentThread().getId()));
+	}
 	public void onStart(ISuite suite)
 	{
 		extent =ExtentReporter.getInstance();
@@ -33,20 +41,23 @@ public class MyListeners implements ITestListener, ISuiteListener {
 	public void onTestFailure(ITestResult result)
 	{
 		System.out.println("Test Failed!" + result.getName());
+		extTest.log(Status.FAIL, result.getName() +" Test-Failed");
 		
 	}
 	
 	public void onTestSkipped(ITestResult result)
 	{
 		System.out.println("Test Skipped!" + result.getName());
+		extTest.log(Status.SKIP, result.getName() +" Test-Skipped");
 	}
 	
 	public void onTestStart(ITestResult result)
 	{
 		System.out.println("Inside Test Start! ");
 		
-		ExtentTest extTest = extent.createTest(result.getName());
+		extTest = extent.createTest(result.getName());
 		extTest.log(Status.INFO, "Test-Name-Started");
+		extentTestMap.put((int)(long) (Thread.currentThread().getId()), extTest);
 //		ExtentSparkReporter spark = new ExtentSparkReporter("ExtentSpark.html");
 //		 ExtentReports extent = new ExtentReports();
 //		 extent.attachReporter(spark);

@@ -6,9 +6,9 @@
       <class name="uitests.usermgmt.LoginTests">
         <methods>
           <include name="setupTest"/>
-          <include name="flushReport"/>
-          <include name="TestOne"/>
           <include name="setupReport"/>
+          <include name="TestOne"/>
+          <include name="flushReport"/>
           <include name="tearDOwn"/>
         </methods>
       </class> <!-- uitests.usermgmt.LoginTests -->

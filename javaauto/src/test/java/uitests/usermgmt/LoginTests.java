@@ -12,10 +12,13 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.Status;
+
 import base.tests.BaseUITest;
 import common.driver.DriverInit;
 import constants.Credentials;
 import pageobjects.usermgmt.HomePage;
+import testng.MyListeners;
 @Listeners(testng.MyListeners.class)
 public class LoginTests extends BaseUITest {
 	
@@ -38,8 +41,11 @@ public class LoginTests extends BaseUITest {
 		
 		
 		HomePage objHomePage = new HomePage(driver);
+		MyListeners.getTest().log(Status.INFO, "Entering the User Name");
 		objHomePage.enterUserName(Credentials.USERNAME);
+		MyListeners.getTest().log(Status.INFO, "Entering the Password");
 		objHomePage.enterPwd(Credentials.PASSWORD);
+		MyListeners.getTest().log(Status.INFO, "Click On Sign-In");
 		objHomePage.clickLogin();
 		
 //		driver.findElement(By.name("username")).sendKeys("rjsapient");
